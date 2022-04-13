@@ -6,37 +6,43 @@ The list of certifications will have links to my Google Drive account with digit
 
 <h2>Python Certifications</h2>
 
-| Certification | Earn_Date | Type | Cert_Num | 
-|----:|----:|----:|----:|
+| <p align='center'>Certification</p> | <p align='center'>Earn_Date</p> | <p align='center'>Cert_Type</p> | <p align='center'>Cert_Num</p> | <p align='center'>Company</p> | <p align='center'>Link</p> |
+|----:|----:|----:|----:|----:|----:|
+
 
 <h2>Numpy/Seaborn/Matplotlib/Pandas Certifications</h2>
 
-| Certification | Earn_Date | Cert_Type | Cert_Num | Company |
-|----:|----:|----:|----:|----:|
-| <b>Seaborn</b> | April 2022 | Course | Nan | MyGreatLearning.com |
+| <p align='center'>Certification</p> | <p align='center'>Earn_Date</p> | <p align='center'>Cert_Type</p> | <p align='center'>Cert_Num</p> | <p align='center'>Company</p> | <p align='center'>Link</p> |
+|----:|----:|----:|----:|----:|----:|
+| <b>Seaborn</b> | April 2022 | Course | Nan | MyGreatLearning.com | <a href='https://drive.google.com/file/d/1_nKRihGOZb0xA4dpM_8LQU6TcMvopLPv/view?usp=sharing'>Link</a>
 
 <h2>Database Certifications</h2>
 
-| Certification | Earn_Date | Type | Cert_Num | 
-|----:|----:|----:|----:|
+| <p align='center'>Certification</p> | <p align='center'>Earn_Date</p> | <p align='center'>Cert_Type</p> | <p align='center'>Cert_Num</p> | <p align='center'>Company</p> | <p align='center'>Link</p> |
+|----:|----:|----:|----:|----:|----:|
+
 
 <h2>Visual Tools Certifications</h2>
 
-| Certification | Earn_Date | Type | Cert_Num | 
-|----:|----:|----:|----:|
+| <p align='center'>Certification</p> | <p align='center'>Earn_Date</p> | <p align='center'>Cert_Type</p> | <p align='center'>Cert_Num</p> | <p align='center'>Company</p> | <p align='center'>Link</p> |
+|----:|----:|----:|----:|----:|----:|
+
 
 <h2>Excel & VBA Certifications</h2>
 
-| Certification | Earn_Date | Type | Cert_Num | 
-|----:|----:|----:|----:|
+| <p align='center'>Certification</p> | <p align='center'>Earn_Date</p> | <p align='center'>Cert_Type</p> | <p align='center'>Cert_Num</p> | <p align='center'>Company</p> | <p align='center'>Link</p> |
+|----:|----:|----:|----:|----:|----:|
+
 
 <h2>Big Data Framework Certifications</h2>
 
-| Certification | Earn_Date | Type | Cert_Num | 
-|----:|----:|----:|----:|
+| <p align='center'>Certification</p> | <p align='center'>Earn_Date</p> | <p align='center'>Cert_Type</p> | <p align='center'>Cert_Num</p> | <p align='center'>Company</p> | <p align='center'>Link</p> |
+|----:|----:|----:|----:|----:|----:|
+
 
 <h2>Machine Learning Certifications</h2>
 
-| Certification | Earn_Date | Type | Cert_Num | 
-|----:|----:|----:|----:|
+| <p align='center'>Certification</p> | <p align='center'>Earn_Date</p> | <p align='center'>Cert_Type</p> | <p align='center'>Cert_Num</p> | <p align='center'>Company</p> | <p align='center'>Link</p> |
+|----:|----:|----:|----:|----:|----:|
+
 
