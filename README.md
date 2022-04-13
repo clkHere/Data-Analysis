@@ -1,9 +1,7 @@
 # Data-Science
 This repo will house all lessons, projects, and code relating to my data science journey. 
 
-## My Journey Towards Becoming A Certified Data Analyst: 
-
-<hr/> 
+<h3><ins>My Journey Towards Becoming A Certified Data Analyst</ins>:<h3> 
 
 ## Week1 : Python Data Analysis, Manipulation, & Visualization Libraries
 (<i>Checkmarks mean completed</i>)
@@ -14,7 +12,7 @@ This repo will house all lessons, projects, and code relating to my data science
 | <b>Pandas</b> | 15 hours | - [Jovian Cert](https://) | Performing routine EDA and completing real-world problem analysis |
 | <b>Matplotlib</b> | 5 hours | - Plotting Projects | Use of matplotlib to plot several charts, graphs, and plots | 
 | &check; <b>Seaborn</b></p> | 5 hours | - [Great Learning Certificate](https://) | Using Seaborn to plot Heatmaps, scatterplots, etc. | 
-| &check; <b>Data Analysis| 45 hours | - [freeCodeCamp Certificate](https://) | 5 data analysis projects completed (300 hour program) | 
+| &check; <span style='color:blue'><b>Data Analysis</b></span>| 45 hours | - [freeCodeCamp Certificate](https://) | 5 data analysis projects completed (300 hour program) | 
 
 <b>Total Hours</b>: 80 hours
 
