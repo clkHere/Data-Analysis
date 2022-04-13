@@ -13,9 +13,10 @@ This repo will house all lessons, projects, and code relating to my data science
 | <b>Numpy</b> | 10 hours | SimpliLearn Cert<br>MyGreatLearning Cert | Performance of NumPy arithmetic ops and plotting using matplotlib |
 | <b>Pandas</b> | 15 hours | 5 cases<br>FreeCodeCamp Cert<br>Jovian Cert | Performing routine EDA and completing real-world problem analysis |
 | <b>Matplotlib</b> | 5 hours | Plotting Projects | Use of matplotlib to plot several charts, graphs, and plots | 
-| <b>Seaborn</b> | 5 hours | Great Learning Certificate | Using Seaborn to plot Heatmaps, scatterplots, etc. | 
+| &check; <b>Seaborn</b> | 5 hours | Great Learning Certificate | Using Seaborn to plot Heatmaps, scatterplots, etc. | 
+| &check; <b>Data Analysis| 45 hours | freeCodeCamp | 5 data analysis projects completed | 
 
-<b>Total Hours</b>: 35 hours
+<b>Total Hours</b>: 80 hours
 
 ## Week 2 : Python & Databases
 (<i>Checkmarks mean completed</i>)
