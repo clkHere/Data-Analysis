@@ -19,12 +19,12 @@ This repo will house all lessons, projects, and code relating to my data science
 ## Week 2 : Python & Databases
 (<i>Checkmarks mean completed</i>)
 
-| Topic | Timeframe | Credential | Description | 
+| Topic | Timeframe | Credential/Works | Description | 
 |---:|---:|---:|---:|
 | <b>Python & MySQL</b> | 5 hours | NaN | MySQL CRUD using Python |
 | <b>Python & MongoDB</b> | 5 hours | MongoDB Certification | PostgreSQL CRUD using Python | 
 | <b>Python & SQLite</b> | 5 hours | NaN | SQLite CRUD using Python |
-| <b>Data Analysis Case Study</b> | 3 hours | NaN | Completion of EDA on a real world problem case |
+| &check; <b>Data Analysis Case Study</b> | 6 hours | - [ACA Health Insurance Project](https://github.com/xxkohxx/PythonStuff/blob/a945c088cde57ea14aa2a9a074d421dbf2cd5376/B_Data_Science_Journey/0.%20Projects/e.%20Jovian%20Cert/Analysis_Health%20Insurance%20Coverage.ipynb) | Completion of EDA on a real world case |
 
 <b>Total Hours</b>: 18 hours
 
