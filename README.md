@@ -1,4 +1,4 @@
-# Data-Science
+# Data-Analysis
 This repo will house all lessons, projects, and code relating to my data science journey. 
 
 <h3><ins>My Journey Towards Becoming A Certified Data Analyst</ins>:<h3> 
