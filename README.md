@@ -20,9 +20,9 @@ This repo will house all lessons, projects, and code relating to my data science
 (<i>Checkmarks mean completed</i>)
 
 | Topic | Timeframe | Credential/Works | Description | 
-|---:|---:|---:|---:|
+|:---|:---:|:---|:---|
 | <b>Python & MySQL</b> | 5 hours | NaN | MySQL CRUD using Python |
-| <b>Python & MongoDB</b> | 5 hours | MongoDB Certification | PostgreSQL CRUD using Python | 
+| <b>Google Data Analytics Professional Course</b> | 5 hours | Professional Certificate | PostgreSQL CRUD using Python | 
 | <b>Python & SQLite</b> | 5 hours | NaN | SQLite CRUD using Python |
 | &check; <b>Data Analysis Case Study</b> | 6 hours | - [ACA Health Insurance Project](https://github.com/xxkohxx/PythonStuff/blob/a945c088cde57ea14aa2a9a074d421dbf2cd5376/B_Data_Science_Journey/0.%20Projects/e.%20Jovian%20Cert/Analysis_Health%20Insurance%20Coverage.ipynb) | Completion of EDA on a real world case |
 
