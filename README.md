@@ -1,10 +1,10 @@
 # Data-Analysis
-This repo will house all lessons, projects, and code relating to my data science journey. 
+This repo houses all formal lessons, projects, and code related to my data analysis experience. 
 
-<h3><ins>My Journey To Becoming A Data Analyst</ins>:<h3> 
+<h3><ins>Experience Formalization Roadmap</ins>:<h3> 
 
 ## Checkpoint 1 : Python Data Analysis, Manipulation, & Visualization Libraries
-(<i>Checkmarks mean completed</i>)
+(<i>Checkmarks(&check;) = completed</i>)
 
 | Topic | Timeframe | Credential | Description | 
 |:---|:---:|:---|:---|
