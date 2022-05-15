@@ -19,7 +19,7 @@ This repo will house all lessons, projects, and code relating to my data science
 
 | Topic | Timeframe | Credential/Works | Description | 
 |:---|:---:|:---|:---|
-  | <b>SQL</b> | 8 hours | [Codecademy](https://drive.google.com/file/d/1-kfudCi1jWrFIdeGbqyn4Q2_3OuQDn7j/view?usp=sharing) | Refresher SQL course consisting of 5 SQLite projects |
+  | &check; <b>SQL</b> | 8 hours | [Codecademy](https://drive.google.com/file/d/1-kfudCi1jWrFIdeGbqyn4Q2_3OuQDn7j/view?usp=sharing) | Refresher SQL course consisting of 5 SQLite projects |
 | &check; <b>Google Data Analytics<br>Professional Certification | 84 hours | [Professional<br>Certificate](https://www.coursera.org/account/accomplishments/specialization/certificate/47Z4FBGM58NM) | [1. Data, Data, Everywhere](https://www.coursera.org/account/accomplishments/certificate/QPGP2RZZEBNU)<br>[2. Make Data-Driven Decisions](https://www.coursera.org/account/accomplishments/certificate/4ABW8WZVN4YN)<br>[3. Prepare Data for Exploration](https://www.coursera.org/account/accomplishments/certificate/XUNM6MFCX6KB)<br>[4. Process Data to Clean](https://www.coursera.org/account/accomplishments/certificate/ACLJ9ZZN6QX5)<br>[5. Analyze Data](https://www.coursera.org/account/accomplishments/certificate/YT3358L7BHQD)<br>[6. Share Data Visualization](https://www.coursera.org/account/accomplishments/certificate/ZGN7FM9RYQC3)<br>[7. R Programming](https://www.coursera.org/account/accomplishments/certificate/JY84H3VFXQCR)<br>[8. Data Analytics Capstone](https://www.coursera.org/account/accomplishments/certificate/75VG8USMNTG2)<br> | 
   | <b>Scientific Computing with Python</b> | 300 hours | freeCodeCamp Certificate | <ins>Projects</ins><br>1. [Arithmetic Formatter]()<br>2. [Time Calculator]()<br>3. [Budget App]()<br>4. [Polygon Area Calculator]()<br>5. [Probability Calculator]() |
 | &check; <b>Data Analysis Case Study</b> | 6 hours | [ACA Health<br>Insurance Analysis](https://github.com/xxkohxx/PythonStuff/blob/a945c088cde57ea14aa2a9a074d421dbf2cd5376/B_Data_Science_Journey/0.%20Projects/e.%20Jovian%20Cert/Analysis_Health%20Insurance%20Coverage.ipynb) | Completion of EDA on a real world case |
@@ -28,11 +28,11 @@ This repo will house all lessons, projects, and code relating to my data science
 (<i>Checkmarks mean completed</i>)
 
 | Topic | Timeframe | Credential | Description | 
-|---:|---:|---:|---:|
+|:---|:---|:---|:---|
 | <b>Statistics</b> | 10 hours | NaN | Refresher course on Statistics
 | <b>Excel</b> | 5 hours | NaN | Refresher course on advanced Excel techniques
 | &check; <b>Tableau</b> | 20 hours | [Google Course Certificate](https://drive.google.com/file/d/1oQai_IXapZRMnunsIrXOA07C4b_jS-8m/view?usp=sharing) | Visualizing data analysis with Tableau |
-| <b>Data Analysis Case</b> | 3 hours | NaN | Completion of EDA on a real world problem case |
+| &check; <b>Data Analysis Case</b> | 3 hours | [Cyclistic<br>Marketing Analysis](https://github.com/xxkohxx/Data-Analysis/blob/0fea9efcec605cd7fc4aedcceff402e694904dc1/1.%20Portfolio/b.%20Cyclistic%20Marketing%20Analysis/Cyclistic_Analysis.ipynb) | 1. [Cyclistic Summary Report]()<br>2. [Cyclistic Visual Presentation](https://public.tableau.com/app/profile/calvin.king/viz/Cyclistic-Project-Vizzes/A1) |
 
 ## Checkpoint 4 : Big Data Framework & Git
 (<i>Checkmarks mean completed</i>)
