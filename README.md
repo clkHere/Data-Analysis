@@ -27,7 +27,7 @@ This repo houses all formal lessons, projects, and code related to my data analy
 ## Checkpoint 3 : Scholastic & Visualization Software
 (<i>Checkmarks mean completed</i>)
 
-| Topic | Timeframe | Credential | Description | 
+| Topic | Timeframe | Credential/Works | Description | 
 |:---|:---|:---|:---|
 | <b>Statistics</b> | 10 hours | NaN | Refresher course on Statistics
 | <b>Excel</b> | 5 hours | NaN | Refresher course on advanced Excel techniques
