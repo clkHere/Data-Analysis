@@ -32,7 +32,7 @@ This repo houses all formal lessons, projects, and code related to my data analy
 | <b>Statistics</b> | 10 hours | NaN | Refresher course on Statistics
 | <b>Excel</b> | 5 hours | NaN | Refresher course on advanced Excel techniques
 | &check; <b>Tableau</b> | 20 hours | [Google Course Certificate](https://drive.google.com/file/d/1oQai_IXapZRMnunsIrXOA07C4b_jS-8m/view?usp=sharing) | Visualizing data analysis with Tableau |
-| &check; <b>Data Analysis Case</b> | 3 hours | [Cyclistic<br>Marketing Analysis](https://github.com/xxkohxx/Data-Analysis/blob/0fea9efcec605cd7fc4aedcceff402e694904dc1/1.%20Portfolio/b.%20Cyclistic%20Marketing%20Analysis/Cyclistic_Analysis.ipynb) | 1. [Cyclistic Summary Report]()<br>2. [Cyclistic Visual Presentation](https://public.tableau.com/app/profile/calvin.king/viz/CyclisticCustomerInsightStory/CyclisticCustomerInsights) |
+| &check; <b>Data Analysis Case</b> | 3 hours | [Cyclistic<br>Marketing Analysis](https://github.com/xxkohxx/Data-Analysis/blob/0fea9efcec605cd7fc4aedcceff402e694904dc1/1.%20Portfolio/b.%20Cyclistic%20Marketing%20Analysis/Cyclistic_Analysis.ipynb) | 1. [Cyclistic Summary Report]()<br>2. [Cyclistic Visual Presentation](https://public.tableau.com/shared/C4T5QYFF6?:display_count=n&:origin=viz_share_link) |
 
 ## Checkpoint 4 : Big Data Framework & Git
 (<i>Checkmarks mean completed</i>)
