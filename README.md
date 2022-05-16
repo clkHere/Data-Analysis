@@ -8,7 +8,7 @@ This repo houses all formal lessons, projects, and code related to my data analy
 
 | Topic | Timeframe | Credential | Description | 
 |:---|:---:|:---|:---|
-| <b>Numpy</b> | 10 hours | SimpliLearn Cert<br> - MyGreatLearning Cert | Performance of NumPy arithmetic ops and plotting using matplotlib |
+| <b>Numpy</b> | 4 hours | SimpliLearn Cert<br>[MyGreatLearning Cert](https://drive.google.com/file/d/1vYkW-HN-7ADTQEEf6qj0adE63SE8dSBj/view?usp=sharing) | Performance of NumPy arithmetic ops and plotting using matplotlib |
 | &check; <b>Pandas</b> | 60 hours | [Jovian Cert](https://drive.google.com/file/d/12MJKU8uabmaDJok-Zo3if477MHOMJmG1/view?usp=sharing) | Performing routine EDA and completing real-world problem analysis |
 | &check; <b>R Programming</b> | 30 hours | [Coursera/Google Certificate](https://drive.google.com/file/d/14gbfoCtbDzkirDkYHqIyFSAeIbgvxFuv/view?usp=sharing) | Use of R programming and its libraries to ETL, clean, analyze, visualize, and document. | 
 | &check; <b>Seaborn</b></p> | 5 hours | [Great Learning Certificate](https://drive.google.com/file/d/1_nKRihGOZb0xA4dpM_8LQU6TcMvopLPv/view?usp=sharing) | Using Seaborn to plot Heatmaps, scatterplots, etc. | 
