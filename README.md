@@ -1,4 +1,4 @@
-![14671063_10100429786907089_3174150266665891551_n (2)](https://user-images.githubusercontent.com/67473001/169627654-daed357c-97fe-4fdd-88af-4068deac855a.jpg)
+![PersonalHeader](https://user-images.githubusercontent.com/67473001/169627696-4ab0d97b-90e5-48b5-825a-77c7a08bc1ca.png)
 
 # Data-Analysis
 This repo houses all formal lessons, projects, and code related to my data analysis experience. 
