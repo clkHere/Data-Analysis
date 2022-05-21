@@ -1,3 +1,5 @@
+![14671063_10100429786907089_3174150266665891551_n (2)](https://user-images.githubusercontent.com/67473001/169627654-daed357c-97fe-4fdd-88af-4068deac855a.jpg)
+
 # Data-Analysis
 This repo houses all formal lessons, projects, and code related to my data analysis experience. 
 
