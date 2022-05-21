@@ -2,7 +2,11 @@
 
 # Data-Analysis
 This repo houses all formal lessons, projects, and code related to my data analysis experience. 
-
+# Recent Projects:
+1. Cyclistic Bike Share:      [Journal]() | [Viz Presentaion]() | [Formal Report]()
+2. Affordable Care Act:       [Journal]() | [Viz Presentation]() | [Formal Report]()
+3. BAM Services CAPEX:        [Journal]() | [Viz Presentation]() | [Formal Report]()
+<hr>
 <h3><ins>Experience Formalization Roadmap</ins>:<h3> 
 
 ## Checkpoint 1 : Python Data Analysis, Manipulation, & Visualization Libraries
