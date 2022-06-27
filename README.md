@@ -3,8 +3,9 @@
 # Data-Analysis
 This repo houses all formal lessons, projects, and code related to my data analysis experience. 
 # Recent Projects:
-1. Cyclistic Bike Share:      [Journal](https://github.com/xxkohxx/Data-Analysis/blob/5f46ee347b2bc7841190a93d40e705a7ca88f11a/1.%20Portfolio/b.%20Cyclistic%20Marketing%20Analysis/Cyclistic_Analysis.ipynb) | [Viz Presentaion](https://public.tableau.com/views/CyclisticStory_16526650203380/CyclisticCustomerInsights?:language=en-US&:display_count=n&:origin=viz_share_link) | [Formal Report](https://drive.google.com/file/d/1PB2dlDBZeTSRXAypTIxmdZU-EfeHd_R7/view?usp=sharing)
-2. Affordable Care Act:       [Journal](https://github.com/xxkohxx/Data-Analysis/blob/5f46ee347b2bc7841190a93d40e705a7ca88f11a/1.%20Portfolio/a.%20Impact%20Analysis%20of%20the%20Affordable%20Care%20Act/Analysis_Health%20Insurance%20Coverage.ipynb) 
+1. AdventureWorks, Inc.: [Report](https://github.com/clkHere/Data-Analysis/blob/9c82571219bfbb99177fe43c8c7e86ef1a491efe/1.%20Portfolio/e.%20AwesomeWorks_Case/AdventureWorks%20Sales%20Case.pdf)
+2. Cyclistic Bike Share:      [Journal](https://github.com/xxkohxx/Data-Analysis/blob/5f46ee347b2bc7841190a93d40e705a7ca88f11a/1.%20Portfolio/b.%20Cyclistic%20Marketing%20Analysis/Cyclistic_Analysis.ipynb) | [Viz Presentaion](https://public.tableau.com/views/CyclisticStory_16526650203380/CyclisticCustomerInsights?:language=en-US&:display_count=n&:origin=viz_share_link) | [Formal Report](https://drive.google.com/file/d/1PB2dlDBZeTSRXAypTIxmdZU-EfeHd_R7/view?usp=sharing)
+3. Affordable Care Act:       [Journal](https://github.com/xxkohxx/Data-Analysis/blob/5f46ee347b2bc7841190a93d40e705a7ca88f11a/1.%20Portfolio/a.%20Impact%20Analysis%20of%20the%20Affordable%20Care%20Act/Analysis_Health%20Insurance%20Coverage.ipynb) 
 <hr>
 <h3><ins>Experience Formalization Roadmap</ins>:<h3> 
 
