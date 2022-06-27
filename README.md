@@ -1,7 +1,9 @@
 ![PersonalHeader](https://user-images.githubusercontent.com/67473001/169627696-4ab0d97b-90e5-48b5-825a-77c7a08bc1ca.png)
 
 # Data-Analysis
-This repo houses all formal lessons, projects, and code related to my data analysis experience. 
+This repo houses all formal lessons, projects, and code related to my data analysis experience.<br>
+• [Linkedin](https://www.linkedin.com/in/expcalvinking)<br>
+• [Personal Website](https://clkhere.github.io)
 # Recent Projects:
 1. AdventureWorks, Inc.: [Report](https://github.com/clkHere/Data-Analysis/blob/9c82571219bfbb99177fe43c8c7e86ef1a491efe/1.%20Portfolio/e.%20AwesomeWorks_Case/AdventureWorks%20Sales%20Case.pdf)
 2. Cyclistic Bike Share:      [Journal](https://github.com/xxkohxx/Data-Analysis/blob/5f46ee347b2bc7841190a93d40e705a7ca88f11a/1.%20Portfolio/b.%20Cyclistic%20Marketing%20Analysis/Cyclistic_Analysis.ipynb) | [Viz Presentaion](https://public.tableau.com/views/CyclisticStory_16526650203380/CyclisticCustomerInsights?:language=en-US&:display_count=n&:origin=viz_share_link) | [Formal Report](https://drive.google.com/file/d/1PB2dlDBZeTSRXAypTIxmdZU-EfeHd_R7/view?usp=sharing)
