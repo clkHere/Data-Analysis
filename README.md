@@ -40,12 +40,19 @@ This repo houses all formal lessons, projects, and code related to my data analy
 | &check; <b>Tableau</b> | 20 hours | [Google Course Certificate](https://drive.google.com/file/d/1oQai_IXapZRMnunsIrXOA07C4b_jS-8m/view?usp=sharing) | Visualizing data analysis with Tableau |
 | &check; <b>Data Analysis Project</b> | 8 hours | Cyclistic Marketing Analysis | 1. [Documentation Journal](https://github.com/xxkohxx/Data-Analysis/blob/0fea9efcec605cd7fc4aedcceff402e694904dc1/1.%20Portfolio/b.%20Cyclistic%20Marketing%20Analysis/Cyclistic_Analysis.ipynb)<br>2. [Summary Report of Findings](https://drive.google.com/file/d/1PB2dlDBZeTSRXAypTIxmdZU-EfeHd_R7/view?usp=sharing)<br>3. [Cyclistic Visual Presentation](https://public.tableau.com/shared/C4T5QYFF6?:display_count=n&:origin=viz_share_link) |
 
-## Checkpoint 4 : Big Data Framework & Git
+## Checkpoint 4 : Salesforce Certifications
 (<i>Checkmarks(&check;) = completed</i>)
 
 | Topic | Timeframe | Credential | Description | 
 |:---|:---|:---|:---|
-| <b>Apache Spark & Python</b> | 10 hours | Course Certification | 20+ hands-on data set analysis |
-| <b>SCRUM Master</b> | 10 hours | GitLab Associate Certification | <a href="">More Info</a> | 
-| <b>Machine Learning Fundamental | 5 hours | N/A | N/A | 
-  | <b> Data Analysis Project</b> | N/A | N/A | N/A |
+| <b>Salesforce Administrator Certification</b> | 1 hour | <a href="https://trailblazer.me/id/cking195">Certification</a> | Premier Salesforce Certification |
+| &check; <b>Salesforce Business Admin Specialist Superbadge</b> | 6 hours | <a href="https://trailblazer.me/id/cking195">Badge Link</a> | Salesforce Unguided Project |
+| <b>Salesforce Lightning Experience Superbadge</b> | 6 hours | <a href="https://trailblazer.me/id/cking195">Badge Link</a> | Salesforce Major Project | 
+| <b>Salesforce Security Specialist Superbadge</b> | 6 hours | <a href="https://trailblazer.me/id/cking195">Badge Link</a> | Salesforce Major Project | 
+| &check; <b>Trailhead Military: Salesforce Certified Administrator</b> | 36 hours | <a href="">Results</a> | Salesforce Trailmix |
+| &check; <b>Salesforce Admin Career Trailmix</b> | 27 hours | <a href="https://trailblazer.me/id/cking195">Results</a> | Salesforce Trailmix | 
+| &check; <b>Business Analyst Career Trailmix</b> | 26 hours | <a href="https://trailblazer.me/id/cking195">Results</a> | Salesforce Trailmix | 
+
+## Checkpoint 5: Business Analyst Industry Certifications
+(Coming soon)
+
