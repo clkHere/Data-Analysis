@@ -50,8 +50,8 @@ This repo houses all formal lessons, projects, and code related to my data analy
 |:---|:---|:---|:---|
 | <b>Salesforce Administrator Certification</b> | 1 hour | <a href="https://trailblazer.me/id/cking195">Certification</a> | Premier Salesforce Certification |
 | &check; <b>Salesforce Business Admin Specialist Superbadge</b> | 6 hours | <a href="https://trailblazer.me/id/cking195">Badge Link</a> | Salesforce Unguided Project |
-| <b>Salesforce Lightning Experience Superbadge</b> | 6 hours | <a href="https://trailblazer.me/id/cking195">Badge Link</a> | Salesforce Major Project | 
-| <b>Salesforce Security Specialist Superbadge</b> | 6 hours | <a href="https://trailblazer.me/id/cking195">Badge Link</a> | Salesforce Major Project | 
+| &check; <b>Salesforce Lightning Experience Superbadge</b> | 6 hours | <a href="https://trailblazer.me/id/cking195">Badge Link</a> | Salesforce Major Project | 
+| <b>Lightning Rollout Specialist Superbadge</b> | 6 hours | <a href="https://trailblazer.me/id/cking195">Badge Link</a> | Salesforce Major Project | 
 | &check; <b>Trailhead Military: Salesforce Certified Administrator</b> | 36 hours | <a href="">Results</a> | Salesforce Trailmix |
 | &check; <b>Salesforce Admin Career Trailmix</b> | 27 hours | <a href="https://trailblazer.me/id/cking195">Results</a> | Salesforce Trailmix | 
 | &check; <b>Business Analyst Career Trailmix</b> | 26 hours | <a href="https://trailblazer.me/id/cking195">Results</a> | Salesforce Trailmix | 
