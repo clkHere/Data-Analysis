@@ -37,9 +37,9 @@ This repo houses all formal lessons, projects, and code related to my data analy
 (<i>Checkmarks(&check;) = completed</i>)
 
 | Topic | Timeframe | Credential/Works | Description | 
-|:---|:---|:---|:---|
+|:---|:-----|:---|:---|
 | &check; <b>Statistics</b> | 10 hours |  [Great Learning Certificate](https://drive.google.com/file/d/1rZ4ZclGWXnOXxCeAZXtcODfK7RSBA3AP/view?usp=sharing) | Refresher course on Stats (probability, statistical significance, P-testing (T-Tail, ANoVA, Chi-Squared, etc...) | 
-| &check; <b>Excel</b> | 3 hours | [Great Learning Certificate](https://drive.google.com/file/d/1F1qj0jbQjiamZn4qAANKP8FXVfKxLhkb/view?usp=sharing) | Refresher course on advanced Excel techniques
+| &check; <b>Excel</b> | 10 hours | [Great Learning Certificate   ](https://drive.google.com/file/d/1F1qj0jbQjiamZn4qAANKP8FXVfKxLhkb/view?usp=sharing)<br>[MS Excel Expert](https://drive.google.com/file/d/1UeA15TL7ZHioi9DA6CPv7tV7_Co55SZX/view?usp=sharing) | - Refresher course on advanced Excel techniques<br><br>- Excel Expert Certification
 | &check; <b>Tableau</b> | 20 hours | [Google Course Certificate](https://drive.google.com/file/d/1oQai_IXapZRMnunsIrXOA07C4b_jS-8m/view?usp=sharing) | Visualizing data analysis with Tableau |
 | &check; <b>Data Analysis Project</b> | 8 hours | Cyclistic Marketing Analysis | 1. [Documentation Journal](https://github.com/xxkohxx/Data-Analysis/blob/0fea9efcec605cd7fc4aedcceff402e694904dc1/1.%20Portfolio/b.%20Cyclistic%20Marketing%20Analysis/Cyclistic_Analysis.ipynb)<br>2. [Summary Report of Findings](https://drive.google.com/file/d/1PB2dlDBZeTSRXAypTIxmdZU-EfeHd_R7/view?usp=sharing)<br>3. [Cyclistic Visual Presentation](https://public.tableau.com/shared/C4T5QYFF6?:display_count=n&:origin=viz_share_link) |
 
