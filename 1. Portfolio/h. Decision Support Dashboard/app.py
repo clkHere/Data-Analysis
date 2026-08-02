@@ -1,70 +1,3 @@
-'''Enhancemnets
-- Replace all "Salesforce" text with "Maven"
-- The AE should be Calvin King
-- Ability to edit "Line Items (CPQ) and" and update calculations
-- Connect the product table to the quote for product selection.
-    - filepath: C:/Users/Work/Documents/CalTemp/School/WGU/COURSEWORK\D614 - Decision Process Engineering Capstone/Task 2/Data/products.csv
-- List Price in the "Line Item Editor" should reflect the product price.
-- User is able to Add/Delete products from the quote 
-- Accounts side menu updated with accounts table
-    - filepath: C:/Users/Work/Documents/CalTemp/School/WGU/COURSEWORK\D614 - Decision Process Engineering Capstone/Task 2/Data/accounts.csv
-- Opportunities side menu updated with opportunity data
-    - filepath: C:/Users/Work/Documents/CalTemp/School/WGU/COURSEWORK\D614 - Decision Process Engineering Capstone/Task 2/Data/sales_pipeline.csv
-- A "Decision Support" option added to the quote after "Line Items (CPQ)"
-    - The "Decision Support" option shall summarize the product and pricing
-      for the quote, utilize the regression analysis odds, and provide the
-      user with a predicted win rate based on similar opportunities and price.
-    - filepath: C:/Users/Work/Documents/CalTemp/School/WGU/COURSEWORK\D614 - Decision Process Engineering Capstone/Task 2/Task_2_Logit_Regressor_V03.py
---EVERYTHING ABOVE THIS TEXT HAS BEEN COMPLETE--
-
-Enhancements 2: 
-    - Update the "Line Items (CPQ)" section to allow user to set a price
-    - In the "Line Item Editor" the list price shouldn't be editable
-        - Add an "Offer Price" column that is editable or allow the USER
-          to set an offer price after selecting the product.
-    - In the "Decision Support" section:
-        - Provide the Predicted win for each item on the quote.
-        - Only provide "Similar Benchmark Opportunities" for items listed 
-          on the quote's products.
-        - Do not provide a warning for how far below target it is
-        - Instead, provide how far off it is from the median for similar items
-        - Provide recommendation for increase/decrease price
-        - Assume all product's list prices are at 35% margin
-            - Signal danger (RED) and message to the user if the price they've 
-            set is equal to or below margin, and caution (ORANGE) 
-            if price is within 5 points of margin. 
-            Otherwise, signal (GREEN) if more than 5 points above
-              margin.
---EVERYTHING ABOVE THIS TEXT HAS BEEN COMPLETE--
-Enhancements 3: 
-    - In the "Decsion Support":
-        - Provide median using only close_value that is not empty or nan
-        - Historical benchmark Opportunities list should show products
-          that are located on the quote and update when new items are added
-          to the quote. 
-        - If an item is not discounted (I.E. receives a price higher than list)
-          then the "Discount" text should change to "adder" and show the 
-          positive increase from list. 
-        - The "Item-Level Predicted Win Rates & Margin Threshold Alerts"
-           should show the difference from median for similar opportunities
-           for that line item.
-        - The "Similar Benchmark Opportunities & Price Recommendations" section
-          should use a check down approach and notify user of the methodology.
-          - If a median for similar opportunities cannot be found, then use
-            the median for opportunities with the highest quoted product on the 
-            quote. If that cannot be found, then use the median for
-            opportunities having the highest priced quoted product for the 
-            sector. And so forth. If nothing can be found, then simply state
-            that no comparable exists. 
-    - In the "MAVEN PROPOSAL/QUOTE":
-        - Do not include the list price column
-    - In the "Line Items (CPQ)": 
-        - The grand total calculation shoudl update with any changes to the
-          "Offer Price ($)" in the line-item editor. 
-              
-'''
-
-
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -73,10 +6,10 @@ import os
 import plotly.express as px
 
 # --- WHERE OUR DATA FILES LIVE ---
-PRODUCTS_FILE = r"C:/Users/Work/Documents/CalTemp/School/WGU/COURSEWORK/D614 - Decision Process Engineering Capstone/Task 2/Data/products.csv"
-ACCOUNTS_FILE = r"C:/Users/Work/Documents/CalTemp/School/WGU/COURSEWORK/D614 - Decision Process Engineering Capstone/Task 2/Data/accounts.csv"
-PIPELINE_FILE = r"C:/Users/Work/Documents/CalTemp/School/WGU/COURSEWORK/D614 - Decision Process Engineering Capstone/Task 2/Data/sales_pipeline.csv"
-LOGIT_SCRIPT_FILE = r"C:/Users/Work/Documents/CalTemp/School/WGU/COURSEWORK/D614 - Decision Process Engineering Capstone/Task 2/Task_2_Logit_Regressor_V03.py"
+PRODUCTS_FILE = "Data/products.csv"
+ACCOUNTS_FILE = "Data/accounts.csv"
+PIPELINE_FILE = "Data/sales_pipeline.csv"
+LOGIT_SCRIPT_FILE = "Task_2_Logit_Regressor_V03.py"
 
 # --- THE MUST-HAVE INFORMATION FOR EACH QUOTE ITEM ---
 REQUIRED_COLUMNS = ["Product", "List Price", "Offer Price", "Quantity"]
