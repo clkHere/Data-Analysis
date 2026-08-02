@@ -1,3 +1,4 @@
+from pathlib import Path
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -5,10 +6,13 @@ import datetime
 import os
 import plotly.express as px
 
+# Automatically find the directory where app.py is located
+BASE_DIR = Path(__file__).resolve().parent
+
 # --- WHERE OUR DATA FILES LIVE ---
-PRODUCTS_FILE = "Data/products.csv"
-ACCOUNTS_FILE = "Data/accounts.csv"
-PIPELINE_FILE = "Data/sales_pipeline.csv"
+PRODUCTS_FILE = BASE_DIR / "Data" / "products.csv"
+ACCOUNTS_FILE = BASE_DIR / "Data" / "accounts.csv"
+PIPELINE_FILE = BASE_DIR / "Data" / "sales_pipeline.csv"
 LOGIT_SCRIPT_FILE = "Logit_Regressor.py"
 
 # --- THE MUST-HAVE INFORMATION FOR EACH QUOTE ITEM ---
