@@ -6,10 +6,10 @@ import os
 import plotly.express as px
 
 # --- WHERE OUR DATA FILES LIVE ---
-PRODUCTS_FILE = "Data/products.csv"
-ACCOUNTS_FILE = "Data/accounts.csv"
-PIPELINE_FILE = "Data/sales_pipeline.csv"
-LOGIT_SCRIPT_FILE = "Task_2_Logit_Regressor_V03.py"
+PRODUCTS_FILE = "Data-Analysis/1. Portfolio/h. Decision Support Dashboard/Data/products.csv"
+ACCOUNTS_FILE = "Data-Analysis/1. Portfolio/h. Decision Support Dashboard/Data/accounts.csv"
+PIPELINE_FILE = "Data-Analysis/1. Portfolio/h. Decision Support Dashboard/Data/sales_pipeline.csv"
+LOGIT_SCRIPT_FILE = "Data-Analysis/1. Portfolio/h. Decision Support Dashboard/Task_2_Logit_Regressor_V03.py"
 
 # --- THE MUST-HAVE INFORMATION FOR EACH QUOTE ITEM ---
 REQUIRED_COLUMNS = ["Product", "List Price", "Offer Price", "Quantity"]
