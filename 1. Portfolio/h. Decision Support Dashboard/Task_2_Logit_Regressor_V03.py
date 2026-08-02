@@ -22,9 +22,9 @@ SECTION 1.1: SETUP AND DATA LOADING
 ==================================================================
 Load all our business datasets and join them together into one place.
 '''
-pipeline_df = pd.read_csv('data/sales_pipeline.csv')
-accounts_df = pd.read_csv('data/accounts.csv')
-products_df = pd.read_csv('data/products.csv')
+pipeline_df = pd.read_csv('Data/sales_pipeline.csv')
+accounts_df = pd.read_csv('Data/accounts.csv')
+products_df = pd.read_csv('Data/products.csv')
 
 # Combine sales pipeline, account details, and prodinfo into one main dataset
 mdata = (pipeline_df
