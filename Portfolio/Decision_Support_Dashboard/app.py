@@ -26,6 +26,197 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+# --- EXECUTIVE DESIGN SYSTEM & CUSTOM CSS OVERRIDES ---
+st.markdown("""
+<style>
+    /* 1. Global App & Background */
+    .stApp {
+        background-color: #F8FAFC !important;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+        color: #0F172A !important;
+    }
+    
+    /* Clean Sidebar Styling */
+    section[data-testid="stSidebar"] {
+        background-color: #FFFFFF !important;
+        border-right: 1px solid #E2E8F0 !important;
+    }
+
+    /* Force all standard text elements to crisp typography */
+    p, span, label, div, li, h1, h2, h3, h4, h5, h6, .stMarkdown {
+        color: #0F172A !important;
+    }
+
+    /* Force captions and small text to muted gray */
+    .stCaption, small, [data-testid="stCaptionContainer"] p {
+        color: #64748B !important;
+        font-weight: 500 !important;
+    }
+
+    /* 2. Glass Cards */
+    .glass-card {
+        background-color: #FFFFFF !important;
+        border: 1px solid #E2E8F0 !important;
+        border-radius: 10px !important;
+        padding: 20px 24px !important;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04) !important;
+        margin-bottom: 16px !important;
+    }
+
+    /* 3. Typography Helpers */
+    .metric-value {
+        font-size: 2.25rem !important;
+        font-weight: 700 !important;
+        color: #0F172A !important;
+        letter-spacing: -0.02em !important;
+        line-height: 1.1 !important;
+    }
+    
+    .metric-label {
+        font-size: 0.75rem !important;
+        font-weight: 600 !important;
+        text-transform: uppercase !important;
+        color: #64748B !important;
+        letter-spacing: 0.05em !important;
+    }
+    
+    .field-value {
+        color: #0F172A !important;
+        font-weight: 500 !important;
+        font-size: 0.95rem !important;
+        margin-top: 2px !important;
+    }
+
+    /* 4. Streamlit Native Metrics Override */
+    div[data-testid="stMetric"] {
+        background-color: #FFFFFF !important;
+        padding: 16px 20px !important;
+        border-radius: 10px !important;
+        border: 1px solid #E2E8F0 !important;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.04) !important;
+    }
+    div[data-testid="stMetricValue"] * {
+        color: #0F172A !important;
+        font-weight: 700 !important;
+    }
+    div[data-testid="stMetricLabel"] * {
+        color: #64748B !important;
+        font-weight: 600 !important;
+        text-transform: uppercase !important;
+        font-size: 0.75rem !important;
+        letter-spacing: 0.05em !important;
+    }
+
+    /* 5. Integrated Process Stepper Bar */
+    .stepper-wrapper {
+        display: flex;
+        align-items: center;
+        background: #FFFFFF;
+        border: 1px solid #E2E8F0;
+        border-radius: 8px;
+        padding: 4px;
+        margin: 16px 0 24px 0;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.02);
+    }
+    
+    .step-item {
+        flex: 1;
+        text-align: center;
+        padding: 8px 12px;
+        font-size: 0.825rem;
+        font-weight: 500;
+        color: #64748B;
+        border-radius: 6px;
+        transition: all 0.2s ease;
+    }
+    
+    .step-item.active {
+        background-color: #2563EB;
+        color: #FFFFFF !important;
+        font-weight: 600;
+        box-shadow: 0 2px 4px rgba(37, 99, 235, 0.18);
+    }
+    
+    .step-item.completed {
+        color: #0F172A;
+        font-weight: 500;
+    }
+
+    /* 6. Form Inputs, Selectboxes & Textboxes */
+    input, select, textarea, div[data-baseweb="input"], div[data-baseweb="select"] {
+        background-color: #FFFFFF !important;
+        color: #0F172A !important;
+        border-color: #CBD5E1 !important;
+        border-radius: 6px !important;
+    }
+
+    /* 7. Modern Flat Tabs */
+    .stTabs [data-baseweb="tab-list"] {
+        gap: 28px !important;
+        border-bottom: 1px solid #E2E8F0 !important;
+        background-color: transparent !important;
+    }
+    
+    .stTabs [data-baseweb="tab"] {
+        height: 40px !important;
+        white-space: pre-wrap !important;
+        border-radius: 0px !important;
+        color: #64748B !important;
+        font-weight: 500 !important;
+        font-size: 0.875rem !important;
+        border-bottom: 2px solid transparent !important;
+        padding: 0px 4px !important;
+    }
+    
+    .stTabs [aria-selected="true"] {
+        color: #2563EB !important;
+        border-bottom: 2px solid #2563EB !important;
+        background-color: transparent !important;
+        font-weight: 600 !important;
+    }
+
+    /* 8. Modern Buttons */
+    div.stButton > button {
+        border-radius: 6px !important;
+        border: 1px solid #CBD5E1 !important;
+        font-weight: 500 !important;
+        font-size: 0.85rem !important;
+        color: #334155 !important;
+        background-color: #FFFFFF !important;
+        transition: all 0.15s ease !important;
+    }
+    
+    div.stButton > button:hover {
+        border-color: #94A3B8 !important;
+        background-color: #F8FAFC !important;
+        color: #0F172A !important;
+    }
+
+    div.stButton > button[kind="primary"] {
+        background-color: #2563EB !important;
+        border-color: #2563EB !important;
+        color: #FFFFFF !important;
+    }
+
+    div.stButton > button[kind="primary"] * {
+        color: #FFFFFF !important;
+    }
+
+    /* 9. Container Borders & Dividers */
+    div[data-testid="stVerticalBlockBorderWrapper"] {
+        background-color: #FFFFFF !important;
+        border-radius: 10px !important;
+        border: 1px solid #E2E8F0 !important;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04) !important;
+    }
+
+    hr {
+        margin: 1.5rem 0 !important;
+        border-color: #E2E8F0 !important;
+    }
+</style>
+""", unsafe_allow_html=True)
+
 # --- LOAD DATA SAFELY IN THE BACKGROUND ---
 @st.cache_data
 def load_data(filepath):
@@ -63,126 +254,6 @@ def ensure_line_items_schema(df):
     df["Product"] = df["Product"].fillna("Custom Product").astype(str)
     
     return df[REQUIRED_COLUMNS]
-
-# --- LIGHTNING CSS OVERRIDES (HIGH-CONTRAST LIGHT THEME) ---
-st.markdown("""
-<style>
-    /* 1. Global App & Text Colors */
-    .stApp {
-        background-color: #ECEFEF !important;
-        color: #2B2827 !important;
-    }
-    
-    /* Force all standard text elements to dark slate for high contrast */
-    p, span, label, div, li, h1, h2, h3, h4, h5, h6, .stMarkdown {
-        color: #16325C !important;
-    }
-
-    /* Force captions and small text to dark blue-gray */
-    .stCaption, small, [data-testid="stCaptionContainer"] p {
-        color: #54698D !important;
-        font-weight: 600 !important;
-    }
-
-    /* 2. Header Card */
-    .sf-header-card {
-        background-color: #FFFFFF;
-        padding: 16px 20px;
-        border-radius: 8px;
-        border: 1px solid #D8DDE6;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.04);
-        margin-bottom: 16px;
-    }
-    .sf-object-label {
-        font-size: 11px;
-        text-transform: uppercase;
-        color: #54698D !important;
-        font-weight: 700;
-        letter-spacing: 0.5px;
-    }
-    .sf-record-name {
-        font-size: 22px;
-        font-weight: 700;
-        color: #16325C !important;
-        margin-top: 2px;
-    }
-
-    /* 3. Card Headers & Labels */
-    .sf-card-header {
-        font-size: 15px;
-        font-weight: 700;
-        color: #16325C !important;
-        padding-bottom: 8px;
-        border-bottom: 2px solid #0070D2;
-        margin-bottom: 12px;
-    }
-
-    /* 4. Streamlit Metrics Override */
-    div[data-testid="stMetric"] {
-        background-color: #FFFFFF !important;
-        padding: 14px 18px !important;
-        border-radius: 6px !important;
-        border: 1px solid #D8DDE6 !important;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.05) !important;
-    }
-    div[data-testid="stMetricValue"] * {
-        color: #16325C !important;
-        font-weight: 700 !important;
-    }
-    div[data-testid="stMetricLabel"] * {
-        color: #54698D !important;
-        font-weight: 700 !important;
-        text-transform: uppercase;
-        font-size: 12px !important;
-    }
-
-    /* 5. Clean Button Styling (Light Theme) */
-    div.stButton > button {
-        background-color: #FFFFFF !important;
-        color: #0070D2 !important;
-        border: 1px solid #D8DDE6 !important;
-        font-weight: 600 !important;
-        border-radius: 4px !important;
-        transition: all 0.2s ease;
-    }
-    div.stButton > button:hover {
-        background-color: #F4F6F9 !important;
-        border-color: #0070D2 !important;
-    }
-    div.stButton > button[kind="primary"] {
-        background-color: #0070D2 !important;
-        border-color: #0070D2 !important;
-        color: #FFFFFF !important;
-    }
-    div.stButton > button[kind="primary"] * {
-        color: #FFFFFF !important;
-    }
-
-    /* 6. Fix Form Inputs & Textboxes */
-    input, select, textarea, div[data-baseweb="input"] {
-        background-color: #FFFFFF !important;
-        color: #16325C !important;
-        border-color: #C9C7C5 !important;
-    }
-
-    /* 7. Tab Headers Formatting */
-    button[data-baseweb="tab"] * {
-        color: #54698D !important;
-        font-weight: 700 !important;
-        font-size: 14px !important;
-    }
-    button[aria-selected="true"] * {
-        color: #0070D2 !important;
-    }
-    
-    /* 8. Container Border Boxes */
-    div[data-testid="stVerticalBlockBorderWrapper"] {
-        background-color: #FFFFFF !important;
-        border-radius: 8px !important;
-        border: 1px solid #D8DDE6 !important;
-    }
-</style>
-""", unsafe_allow_html=True)
 
 # --- KEEP TRACK OF USER SELECTIONS & DEFAULTS ---
 if "nav_page" not in st.session_state:
@@ -226,59 +297,68 @@ def safe_sigmoid(logit_val):
 def apply_salesforce_theme(fig, title=""):
     """Applies clean enterprise colors, fonts, and clean layout to charts."""
     fig.update_layout(
-        title={"text": title, "font": {"size": 14, "color": "#16325C", "family": "Arial, sans-serif"}},
+        title={"text": title, "font": {"size": 14, "color": "#0F172A", "family": "Arial, sans-serif"}},
         paper_bgcolor="#FFFFFF",
         plot_bgcolor="#FFFFFF",
         margin=dict(l=20, r=20, t=40, b=20),
-        font=dict(color="#54698D", size=11),
+        font=dict(color="#64748B", size=11),
         xaxis=dict(
             showgrid=False,
             zeroline=False,
             tickangle=0,
-            tickfont=dict(color="#16325C", size=11)
+            tickfont=dict(color="#0F172A", size=11)
         ),
         yaxis=dict(
             showgrid=True,
-            gridcolor="#E0E5EE",
+            gridcolor="#F1F5F9",
             zeroline=False,
-            tickfont=dict(color="#16325C", size=11)
+            tickfont=dict(color="#0F172A", size=11)
         )
     )
     return fig
 
 # --- LEFT-HAND SIDEBAR MENU ---
 with st.sidebar:
-    st.markdown("### ⚡ **Maven Experience**")
-    st.selectbox("App Switcher", ["Sales Console", "Service Cloud", "CPQ Quoting"], index=2)
-    st.divider()
+    st.markdown("<h3 style='color: #0F172A; font-size: 1.1rem; font-weight: 700; margin-bottom: 0;'>⚡ Maven Experience</h3>", unsafe_allow_html=True)
+    st.caption("CPQ Quoting Workspace")
+    st.selectbox("App Switcher", ["Sales Console", "Service Cloud", "CPQ Quoting"], index=2, label_visibility="collapsed")
     
-    st.markdown("**Navigation**")
+    st.markdown("---")
+    
+    st.caption("NAVIGATION")
     if st.button("🏠 Home", use_container_width=True, type="primary" if st.session_state.nav_page == "Home" else "secondary"):
         st.session_state.nav_page = "Home"
+        st.rerun()
     if st.button("💼 Accounts", use_container_width=True, type="primary" if st.session_state.nav_page == "Accounts" else "secondary"):
         st.session_state.nav_page = "Accounts"
+        st.rerun()
     if st.button("🎯 Opportunities", use_container_width=True, type="primary" if st.session_state.nav_page == "Opportunities" else "secondary"):
         st.session_state.nav_page = "Opportunities"
+        st.rerun()
     if st.button("📄 Quotes", use_container_width=True, type="primary" if st.session_state.nav_page == "Quotes" else "secondary"):
         st.session_state.nav_page = "Quotes"
+        st.rerun()
     if st.button("📦 Products", use_container_width=True, type="primary" if st.session_state.nav_page == "Products" else "secondary"):
         st.session_state.nav_page = "Products"
+        st.rerun()
     
-    st.divider()
-    st.caption("Environment: **Maven Production (NA104)**")
-    st.caption("Logged in as: **Calvin King (AE)**")
+    st.markdown("<br>", unsafe_allow_html=True)
+    st.caption("ENVIRONMENT")
+    st.markdown("<p style='font-size: 0.8rem; color: #64748B; margin: 0;'>Maven Production (NA104)</p>", unsafe_allow_html=True)
+    
+    st.caption("USER")
+    st.markdown("<p style='font-size: 0.8rem; color: #64748B; margin: 0;'>Calvin King (AE)</p>", unsafe_allow_html=True)
 
 # --- PAGE 1: EXECUTIVE SALES DASHBOARD ---
 if st.session_state.nav_page == "Home":
     st.markdown("""
-    <div class="sf-header-card">
-        <div class="sf-object-label">Executive Sales Console</div>
-        <div class="sf-record-name">Calvin King — Sales Rep Performance Dashboard</div>
+    <div class="glass-card">
+        <div class="metric-label">Executive Sales Console</div>
+        <div style="font-size: 1.5rem; font-weight: 700; color: #0F172A; margin-top: 2px;">Calvin King — Sales Rep Performance Dashboard</div>
     </div>
     """, unsafe_allow_html=True)
 
     # Top summary metrics
-    st.markdown("##### **Key Performance Indicators**")
     m1, m2, m3, m4, m5 = st.columns(5)
     m1.metric("Pipeline Value", "$342,500", delta="+12.4% vs Q1")
     m2.metric("Quota Attainment", "78.5%", delta="+5.2%")
@@ -286,7 +366,7 @@ if st.session_state.nav_page == "Home":
     m4.metric("Sales Cycle", "28 Days", delta="-4 Days")
     m5.metric("Open Proposals", "8 Quotes", delta="2 In Review")
 
-    st.divider()
+    st.markdown("---")
 
     clean_pipe = df_pipeline.copy() if df_pipeline is not None else pd.DataFrame()
     
@@ -305,7 +385,7 @@ if st.session_state.nav_page == "Home":
                 })
                 stage_col, val_col = "Stage", "Value"
 
-            fig1 = px.bar(stage_df, x=stage_col, y=val_col, text_auto="$,.0f", color_discrete_sequence=["#0070D2"])
+            fig1 = px.bar(stage_df, x=stage_col, y=val_col, text_auto="$,.0f", color_discrete_sequence=["#2563EB"])
             fig1.update_traces(textposition="outside")
             apply_salesforce_theme(fig1, "1. Opportunity Stage Distribution ($)")
             st.plotly_chart(fig1, use_container_width=True)
@@ -316,7 +396,7 @@ if st.session_state.nav_page == "Home":
                 "Category": ["Closed Revenue", "Quota Target"],
                 "Amount": [157000, 200000]
             })
-            fig2 = px.bar(q_df, x="Category", y="Amount", text_auto="$,.0f", color="Category", color_discrete_map={"Closed Revenue": "#2E8B57", "Quota Target": "#54698D"})
+            fig2 = px.bar(q_df, x="Category", y="Amount", text_auto="$,.0f", color="Category", color_discrete_map={"Closed Revenue": "#059669", "Quota Target": "#64748B"})
             fig2.update_traces(textposition="outside")
             apply_salesforce_theme(fig2, "2. Revenue Progress vs. Quota Goal ($)")
             st.plotly_chart(fig2, use_container_width=True)
@@ -329,7 +409,7 @@ if st.session_state.nav_page == "Home":
                 "Month": ["Feb", "Mar", "Apr", "May", "Jun", "Jul"],
                 "Win Rate (%)": [52, 55, 58, 61, 62, 64]
             })
-            fig3 = px.line(trend_df, x="Month", y="Win Rate (%)", markers=True, color_discrete_sequence=["#0070D2"])
+            fig3 = px.line(trend_df, x="Month", y="Win Rate (%)", markers=True, color_discrete_sequence=["#2563EB"])
             apply_salesforce_theme(fig3, "3. Win Rate Trend (6 Months)")
             st.plotly_chart(fig3, use_container_width=True)
 
@@ -339,7 +419,7 @@ if st.session_state.nav_page == "Home":
                 "Product": ["GTX Basic", "MG Enterprise", "GTX Pro", "Service Package"],
                 "Revenue": [85000, 120000, 64000, 32000]
             })
-            fig4 = px.bar(prod_df, x="Product", y="Revenue", text_auto="$,.0f", color_discrete_sequence=["#1B96FF"])
+            fig4 = px.bar(prod_df, x="Product", y="Revenue", text_auto="$,.0f", color_discrete_sequence=["#3B82F6"])
             fig4.update_traces(textposition="outside")
             apply_salesforce_theme(fig4, "4. Top Product Revenue Contributions")
             st.plotly_chart(fig4, use_container_width=True)
@@ -350,74 +430,70 @@ if st.session_state.nav_page == "Home":
                 "Status": ["Draft", "In Review", "Approved", "Accepted"],
                 "Count": [2, 3, 5, 8]
             })
-            fig5 = px.bar(quote_df, x="Status", y="Count", text_auto=True, color_discrete_sequence=["#FF9800"])
+            fig5 = px.bar(quote_df, x="Status", y="Count", text_auto=True, color_discrete_sequence=["#F59E0B"])
             fig5.update_traces(textposition="outside")
             apply_salesforce_theme(fig5, "5. Quotes by Approval Status")
             st.plotly_chart(fig5, use_container_width=True)
 
 # --- PAGE 2: ACCOUNTS OVERVIEW ---
 elif st.session_state.nav_page == "Accounts":
-    st.markdown('<div class="sf-header-card"><div class="sf-object-label">Account Management</div><div class="sf-record-name">Accounts Directory</div></div>', unsafe_allow_html=True)
+    st.markdown('<div class="glass-card"><div class="metric-label">Account Management</div><div style="font-size: 1.5rem; font-weight: 700; color: #0F172A;">Accounts Directory</div></div>', unsafe_allow_html=True)
     if df_accounts is not None:
         st.dataframe(df_accounts, use_container_width=True, hide_index=True)
 
 # --- PAGE 3: OPPORTUNITIES OVERVIEW ---
 elif st.session_state.nav_page == "Opportunities":
-    st.markdown('<div class="sf-header-card"><div class="sf-object-label">Sales Pipeline</div><div class="sf-record-name">Opportunities Overview</div></div>', unsafe_allow_html=True)
+    st.markdown('<div class="glass-card"><div class="metric-label">Sales Pipeline</div><div style="font-size: 1.5rem; font-weight: 700; color: #0F172A;">Opportunities Overview</div></div>', unsafe_allow_html=True)
     if df_pipeline is not None:
         st.dataframe(df_pipeline, use_container_width=True, hide_index=True)
 
 # --- PAGE 4: PRODUCTS CATALOG ---
 elif st.session_state.nav_page == "Products":
-    st.markdown('<div class="sf-header-card"><div class="sf-object-label">Catalog</div><div class="sf-record-name">Products Catalog</div></div>', unsafe_allow_html=True)
+    st.markdown('<div class="glass-card"><div class="metric-label">Catalog</div><div style="font-size: 1.5rem; font-weight: 700; color: #0F172A;">Products Catalog</div></div>', unsafe_allow_html=True)
     if df_products is not None:
         st.dataframe(df_products, use_container_width=True, hide_index=True)
 
 # --- PAGE 5: QUOTE CREATION & DECISION SUPPORT ---
 elif st.session_state.nav_page == "Quotes":
 
-    # Header section with action buttons
-    st.markdown("""
-    <div class="sf-header-card">
-        <div style="display: flex; justify-content: space-between; align-items: center;">
-            <div>
-                <div class="sf-object-label">Maven Quote</div>
-                <div class="sf-record-name">Q-00124 — Acme Corp Expansion</div>
-            </div>
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
+    # Header section with title and quick actions
+    col_title, col_actions = st.columns([2.5, 2], gap="large")
 
-    col_a, col_b, col_c, col_d, col_e = st.columns([2, 1, 1, 1, 1])
-    with col_b:
-        if st.button("Edit Details", use_container_width=True):
-            st.toast("Opening Record Editor...", icon="✏️")
-    with col_c:
-        if st.button("Sync Quote", use_container_width=True):
-            st.toast("Quote synced with Opportunity Opp-49211!", icon="🔄")
-    with col_d:
-        if st.button("Create PDF", use_container_width=True):
-            st.toast("Generating PDF Document...", icon="📄")
-    with col_e:
-        if st.button("Send Email", use_container_width=True):
-            st.toast("Quote PDF emailed to customer!", icon="📧")
+    with col_title:
+        st.caption("MAVEN QUOTE / Q-00124")
+        st.markdown("<h1 style='margin-top: -8px; color: #0F172A; font-size: 1.8rem; font-weight: 700; letter-spacing: -0.02em;'>Acme Corp Expansion</h1>", unsafe_allow_html=True)
+
+    with col_actions:
+        st.markdown("<div style='height: 12px;'></div>", unsafe_allow_html=True)
+        col_b, col_c, col_d, col_e = st.columns(4)
+        with col_b:
+            if st.button("Edit Details", use_container_width=True):
+                st.toast("Opening Record Editor...", icon="✏️")
+        with col_c:
+            if st.button("Sync Quote", use_container_width=True):
+                st.toast("Quote synced with Opportunity Opp-49211!", icon="🔄")
+        with col_d:
+            if st.button("Create PDF", use_container_width=True):
+                st.toast("Generating PDF Document...", icon="📄")
+        with col_e:
+            if st.button("Send Email", type="primary", use_container_width=True):
+                st.toast("Quote PDF emailed to customer!", icon="📧")
 
     # Interactive progress tracker for quote approval
     stages = ["Draft", "In Review", "Approved", "Presented", "Accepted", "Denied"]
-    current_idx = stages.index(st.session_state.quote_status)
-
+    
     cols = st.columns(len(stages))
     for idx, stage in enumerate(stages):
         with cols[idx]:
-            btn_type = "primary" if idx == current_idx else "secondary"
-            label = f"✓ {stage}" if idx < current_idx else (f"▶ {stage}" if idx == current_idx else stage)
+            is_active = (stage == st.session_state.quote_status)
+            btn_type = "primary" if is_active else "secondary"
+            current_idx = stages.index(st.session_state.quote_status)
+            stage_idx = stages.index(stage)
+            
+            label = f"✓ {stage}" if stage_idx < current_idx else (f"▶ {stage}" if is_active else stage)
             if st.button(label, key=f"stage_{stage}", use_container_width=True, type=btn_type):
                 st.session_state.quote_status = stage
                 st.rerun()
-
-    st.divider()
-
-    left_col, right_col = st.columns([2.3, 1])
 
     # Calculate pricing, discounts, and totals
     df_items = ensure_line_items_schema(st.session_state.line_items.copy())
@@ -435,33 +511,56 @@ elif st.session_state.nav_page == "Quotes":
     else:
         subtotal, total_discount, grand_total = 0.0, 0.0, 0.0
 
+    left_col, right_col = st.columns([2.5, 1], gap="large")
+
     # MAIN CONTENT TABS
     with left_col:
         tab_details, tab_lines, tab_decision, tab_pdf = st.tabs([
-            "📋 Quote Details", 
-            "📦 Line Items (CPQ)", 
-            "📊 Decision Support", 
-            "📄 Document Preview"
+            "Quote Details", 
+            "Line Items (CPQ)", 
+            "Decision Support", 
+            "Document Preview"
         ])
 
         # TAB 1: BASIC QUOTE INFORMATION
         with tab_details:
-            with st.container(border=True):
-                st.markdown('<div class="sf-card-header">Information</div>', unsafe_allow_html=True)
-                c1, c2 = st.columns(2)
-                with c1:
-                    st.markdown('<div><strong style="color:#54698D; font-size:11px; text-transform:uppercase;">Quote Number</strong></div><div style="font-size:15px; font-weight:600; color:#16325C; margin-bottom:12px;">Q-00124</div>', unsafe_allow_html=True)
-                    st.markdown('<div><strong style="color:#54698D; font-size:11px; text-transform:uppercase;">Opportunity</strong></div><div style="font-size:15px; font-weight:600; color:#16325C; margin-bottom:12px;">🔗 Acme Corp - Enterprise Expansion</div>', unsafe_allow_html=True)
-                    st.markdown('<div><strong style="color:#54698D; font-size:11px; text-transform:uppercase;">Account Name</strong></div><div style="font-size:15px; font-weight:600; color:#16325C; margin-bottom:12px;">🏢 Acme Corporation</div>', unsafe_allow_html=True)
-                with c2:
-                    st.markdown('<div><strong style="color:#54698D; font-size:11px; text-transform:uppercase;">Account Executive (AE)</strong></div><div style="font-size:15px; font-weight:600; color:#16325C; margin-bottom:12px;">👤 Calvin King</div>', unsafe_allow_html=True)
-                    st.markdown(f'<div><strong style="color:#54698D; font-size:11px; text-transform:uppercase;">Expiration Date</strong></div><div style="font-size:15px; font-weight:600; color:#16325C; margin-bottom:12px;">{(datetime.date.today() + datetime.timedelta(days=30)).strftime("%Y-%m-%d")}</div>', unsafe_allow_html=True)
-                    st.markdown(f'<div><strong style="color:#54698D; font-size:11px; text-transform:uppercase;">Status</strong></div><div style="font-size:15px; font-weight:600; color:#16325C; margin-bottom:12px;">{st.session_state.quote_status}</div>', unsafe_allow_html=True)
+            exp_date_str = (datetime.date.today() + datetime.timedelta(days=30)).strftime("%Y-%m-%d")
+            st.markdown(f"""
+            <div class="glass-card">
+                <h4 style="color: #0F172A; font-size: 0.95rem; margin-bottom: 20px; font-weight: 600;">Information</h4>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px 16px;">
+                    <div>
+                        <div class="metric-label">Quote Number</div>
+                        <div class="field-value">Q-00124</div>
+                    </div>
+                    <div>
+                        <div class="metric-label">Account Executive</div>
+                        <div class="field-value">Calvin King</div>
+                    </div>
+                    <div>
+                        <div class="metric-label">Opportunity</div>
+                        <div class="field-value" style="color: #2563EB;">Acme Corp - Enterprise Expansion</div>
+                    </div>
+                    <div>
+                        <div class="metric-label">Expiration Date</div>
+                        <div class="field-value">{exp_date_str}</div>
+                    </div>
+                    <div>
+                        <div class="metric-label">Account Name</div>
+                        <div class="field-value">Acme Corporation</div>
+                    </div>
+                    <div>
+                        <div class="metric-label">Status</div>
+                        <div class="field-value" style="color: #2563EB;">{st.session_state.quote_status}</div>
+                    </div>
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
 
         # TAB 2: PRODUCT SELECTION & PRICE ADJUSTMENTS
         with tab_lines:
             with st.container(border=True):
-                st.markdown('<div class="sf-card-header">Add Product & Set Offer Price</div>', unsafe_allow_html=True)
+                st.markdown('<div class="metric-label" style="margin-bottom: 12px;">Add Product & Set Offer Price</div>', unsafe_allow_html=True)
                 
                 if df_products is not None and not df_products.empty:
                     prod_col = [c for c in df_products.columns if "product" in c.lower()][0] if any("product" in c.lower() for c in df_products.columns) else df_products.columns[0]
@@ -497,7 +596,7 @@ elif st.session_state.nav_page == "Quotes":
                             st.rerun()
 
             with st.container(border=True):
-                st.markdown('<div class="sf-card-header">Line Item Editor</div>', unsafe_allow_html=True)
+                st.markdown('<div class="metric-label" style="margin-bottom: 12px;">Line Item Editor</div>', unsafe_allow_html=True)
                 
                 edited_df = st.data_editor(
                     st.session_state.line_items,
@@ -513,7 +612,7 @@ elif st.session_state.nav_page == "Quotes":
 
                 st.session_state.line_items = ensure_line_items_schema(edited_df)
 
-                st.divider()
+                st.markdown("---")
                 m1, m2, m3 = st.columns(3)
                 m1.metric("Subtotal (List)", f"${subtotal:,.2f}")
                 m2.metric("Total Discount/Adder", f"-${total_discount:,.2f}" if total_discount >= 0 else f"+${abs(total_discount):,.2f} (Adder)")
@@ -522,9 +621,9 @@ elif st.session_state.nav_page == "Quotes":
         # TAB 3: DECISION SUPPORT
         with tab_decision:
             with st.container(border=True):
-                st.markdown('<div class="sf-card-header">Decision Intelligence & ASP Check-Down Analysis</div>', unsafe_allow_html=True)
+                st.markdown('<div class="metric-label" style="margin-bottom: 12px;">Decision Intelligence & ASP Check-Down Analysis</div>', unsafe_allow_html=True)
                 
-                st.markdown('<div style="font-size:16px; font-weight:700; color:#16325C; margin-bottom:12px;">Quote Level Summary</div>', unsafe_allow_html=True)
+                st.markdown('<div style="font-size:15px; font-weight:700; color:#0F172A; margin-bottom:12px;">Quote Level Summary</div>', unsafe_allow_html=True)
                 ds_col1, ds_col2, ds_col3 = st.columns(3)
                 total_units = int(df_items["Quantity"].sum()) if not df_items.empty else 0
                 avg_discount = float(df_items["Discount (%)"].mean()) if not df_items.empty else 0.0
@@ -537,8 +636,8 @@ elif st.session_state.nav_page == "Quotes":
                 else:
                     ds_col3.metric("Average Discount", f"{avg_discount:.1f}%")
 
-                st.divider()
-                st.markdown('<div style="font-size:16px; font-weight:700; color:#16325C; margin-bottom:16px;">Item-Level Predicted Win Rates & Margin Alerts</div>', unsafe_allow_html=True)
+                st.markdown("---")
+                st.markdown('<div style="font-size:15px; font-weight:700; color:#0F172A; margin-bottom:16px;">Item-Level Predicted Win Rates & Margin Alerts</div>', unsafe_allow_html=True)
                 
                 # Baseline scoring weights for calculating win probability
                 b0 = 0.85
@@ -571,7 +670,7 @@ elif st.session_state.nav_page == "Quotes":
                     if v_col and q_col:
                         clean_pipeline["Unit_Price"] = clean_pipeline[v_col] / clean_pipeline[q_col]
 
-                # Render Line Item Analysis with Closed Won Deals in Median Window
+                # Render Line Item Analysis
                 if not df_items.empty:
                     for idx, row in df_items.iterrows():
                         p_name = str(row["Product"])
@@ -583,179 +682,76 @@ elif st.session_state.nav_page == "Quotes":
                         cost_basis = l_price * 0.65
                         achieved_margin = ((o_price - cost_basis) / o_price) * 100.0 if o_price > 0 else 0.0
 
-                        # Benchmark & Days-to-Close metrics for each product
-                        item_median_price = None
-                        won_above_count = 0
-                        won_below_count = 0
-                        median_days_window = None
-
-                        if not clean_pipeline.empty and p_col:
-                            item_deals = clean_pipeline[clean_pipeline[p_col].astype(str) == p_name].copy()
-                            
-                            if not item_deals.empty and "Unit_Price" in item_deals.columns:
-                                item_median_price = item_deals["Unit_Price"].median()
-
-                            # Identify date and stage columns
-                            date_cols = {str(c).lower().strip(): c for c in item_deals.columns}
-                            engage_k = next((date_cols[k] for k in date_cols if "engage" in k), None)
-                            close_k = next((date_cols[k] for k in date_cols if "close_date" in k or "close date" in k), None)
-                            stage_k = next((date_cols[k] for k in date_cols if "stage" in k), None)
-
-                            if engage_k and close_k and stage_k:
-                                item_deals[engage_k] = pd.to_datetime(item_deals[engage_k], errors='coerce')
-                                item_deals[close_k] = pd.to_datetime(item_deals[close_k], errors='coerce')
-                                item_deals["days_to_close"] = (item_deals[close_k] - item_deals[engage_k]).dt.days
-
-                                won_deals = item_deals[
-                                    (item_deals[stage_k].astype(str).str.lower().str.contains("won")) &
-                                    (item_deals["days_to_close"].notnull()) &
-                                    (item_deals["days_to_close"] >= 0)
-                                ]
-
-                                if not won_deals.empty:
-                                    median_days_window = won_deals["days_to_close"].median()
-                                    in_window_deals = won_deals[won_deals["days_to_close"] <= median_days_window]
-                                    
-                                    won_above_count = int((in_window_deals["Unit_Price"] > o_price).sum())
-                                    won_below_count = int((in_window_deals["Unit_Price"] <= o_price).sum())
-
                         logit_val = b0 + (b1_price * (o_price * qty)) + (b2_disc * disc_pct)
                         item_win_prob = safe_sigmoid(logit_val)
 
                         if o_price <= cost_basis:
-                            margin_signal = "🔴 <strong style='color:#C23934;'>RED (DANGER)</strong>"
-                            margin_status = "error"
+                            margin_signal = "🔴 <strong style='color:#DC2626;'>RED (DANGER)</strong>"
                             msg = f"Offer Price (${o_price:,.2f}) is AT OR BELOW the 35% margin floor (${cost_basis:,.2f})."
                         elif achieved_margin <= 40.0:
-                            margin_signal = "🟠 <strong style='color:#DD7A00;'>ORANGE (CAUTION)</strong>"
-                            margin_status = "warning"
+                            margin_signal = "🟠 <strong style='color:#D97706;'>ORANGE (CAUTION)</strong>"
                             msg = f"Offer Price is within 5 margin percentage points of threshold. Achieved Margin: {achieved_margin:.1f}%."
                         else:
-                            margin_signal = "🟢 <strong style='color:#027E46;'>GREEN (HEALTHY)</strong>"
-                            margin_status = "success"
+                            margin_signal = "🟢 <strong style='color:#059669;'>GREEN (HEALTHY)</strong>"
                             msg = f"Healthy margin achieved ({achieved_margin:.1f}%)."
 
-                        st.markdown(f"<div style='font-size:15px; font-weight:700; color:#16325C;'>Product: {p_name} — {margin_signal}</div>", unsafe_allow_html=True)
-                        ic1, ic2, ic3 = st.columns([1.5, 1.5, 2])
+                        st.markdown(f"<div style='font-size:14px; font-weight:700; color:#0F172A; margin-top:12px;'>Product: {p_name} — {margin_signal}</div>", unsafe_allow_html=True)
+                        ic1, ic2 = st.columns([2, 3])
 
                         with ic1:
                             st.markdown(f"""
-                            <div style='background-color:#F3F5F8; padding:10px 14px; border-radius:6px; border:1px solid #D8DDE6; margin-top:4px;'>
-                                <div style='font-size:13px; color:#16325C; font-weight:600;'>List Price: <span style='color:#0070D2;'>${l_price:,.2f}</span></div>
-                                <div style='font-size:13px; color:#16325C; font-weight:600; margin-top:2px;'>Offer Price: <span style='color:#0070D2;'>${o_price:,.2f}</span></div>
-                                <div style='font-size:13px; color:#16325C; font-weight:600; margin-top:2px;'>Discount: <span style='color:#2E8B57;'>{disc_pct:.1f}%</span></div>
+                            <div style='background-color:#F8FAFC; padding:12px 16px; border-radius:8px; border:1px solid #E2E8F0;'>
+                                <div style='font-size:13px; color:#0F172A; font-weight:600;'>List Price: <span style='color:#2563EB;'>${l_price:,.2f}</span></div>
+                                <div style='font-size:13px; color:#0F172A; font-weight:600; margin-top:4px;'>Offer Price: <span style='color:#2563EB;'>${o_price:,.2f}</span></div>
+                                <div style='font-size:13px; color:#0F172A; font-weight:600; margin-top:4px;'>Discount: <span style='color:#059669;'>{disc_pct:.1f}%</span></div>
                             </div>
                             """, unsafe_allow_html=True)
 
                         with ic2:
-                            st.metric("Predicted Win Rate", f"{item_win_prob:.1f}%")
-                            
-                            if median_days_window is not None and not np.isnan(median_days_window):
-                                st.markdown(f"""
-                                <div style='font-size:12px; font-weight:600; color:#54698D; margin-top:6px;'>
-                                    <strong>Closed Won Deals (≤ {int(median_days_window)} Days):</strong><br/>
-                                    • Above Offer Price (${o_price:,.2f}): <span style='color:#027E46; font-weight:700;'>{won_above_count} deals</span><br/>
-                                    • At/Below Offer Price: <span style='color:#C23934; font-weight:700;'>{won_below_count} deals</span>
-                                </div>
-                                """, unsafe_allow_html=True)
-                            else:
-                                st.markdown("<div style='font-size:12px; font-weight:600; color:#54698D;'>(Insufficient cycle/stage data)</div>", unsafe_allow_html=True)
+                            st.markdown(f"""
+                            <div style='background-color:#F8FAFC; padding:12px 16px; border-radius:8px; border:1px solid #E2E8F0;'>
+                                <div style='font-size:13px; color:#0F172A; font-weight:600;'>Win Probability: <span style='color:#2563EB;'>{item_win_prob:.1f}%</span></div>
+                                <div style='font-size:12px; color:#64748B; margin-top:4px;'>{msg}</div>
+                            </div>
+                            """, unsafe_allow_html=True)
+                        st.markdown("<br>", unsafe_allow_html=True)
 
-                        with ic3:
-                            if margin_status == "error":
-                                st.error(msg)
-                            elif margin_status == "warning":
-                                st.warning(msg)
-                            else:
-                                st.success(msg)
-
-                        st.divider()
-                else:
-                    st.info("No line items currently on quote.")
-
-                # HISTORICAL BENCHMARK & PRICING RECOMMENDATIONS
-                st.markdown('<div style="font-size:16px; font-weight:700; color:#16325C; margin-bottom:12px;">Similar Benchmark Opportunities & Price Recommendations</div>', unsafe_allow_html=True)
-                
-                quote_products = df_items["Product"].astype(str).unique().tolist() if not df_items.empty else []
-
-                if not clean_pipeline.empty and quote_products and p_col:
-                    target_median = None
-                    methodology_used = ""
-                    bench_df = pd.DataFrame()
-
-                    tier1_df = clean_pipeline[clean_pipeline[p_col].astype(str).isin(quote_products)]
-                    if not tier1_df.empty and "Unit_Price" in tier1_df.columns and tier1_df["Unit_Price"].notnull().any():
-                        target_median = tier1_df["Unit_Price"].median()
-                        methodology_used = "Tier 1 — Filtered using exact product matches currently present on this quote."
-                        bench_df = tier1_df.copy()
-
-                    if target_median is not None and not np.isnan(target_median):
-                        st.info(f"ℹ️ **Methodology:** {methodology_used}")
-                        
-                        current_avg_unit = grand_total / total_units if total_units > 0 else 0.0
-                        var_from_med = current_avg_unit - target_median
-                        var_pct_med = (var_from_med / target_median) * 100.0 if target_median > 0 else 0.0
-
-                        mc1, mc2, mc3 = st.columns(3)
-                        with mc1:
-                            st.metric("Quote Avg Unit Price", f"${current_avg_unit:,.2f}")
-                        with mc2:
-                            st.metric("Benchmark Median ASP", f"${target_median:,.2f}")
-                        with mc3:
-                            st.metric("Variance vs Benchmark", f"${var_from_med:,.2f}", delta=f"{var_pct_med:+.1f}%", delta_color="normal")
-
-                        st.markdown('<div style="font-size:14px; font-weight:700; color:#16325C; margin-top:12px; margin-bottom:6px;">Price Recommendation</div>', unsafe_allow_html=True)
-                        if abs(var_from_med) <= (0.02 * target_median):
-                            st.success("💡 Pricing is aligned with the benchmark median for similar opportunities.")
-                        elif var_from_med < 0:
-                            rec_total = abs(var_from_med) * total_units
-                            st.warning(f"💡 Increase price by **${abs(var_from_med):,.2f}/unit** ({abs(var_pct_med):.1f}%) to match benchmark median. Capture adds **${rec_total:,.2f}** in quote value.")
-                        else:
-                            st.info(f"💡 Decrease price by **${var_from_med:,.2f}/unit** ({var_pct_med:.1f}%) if buyer price resistance occurs.")
-
-                        st.markdown('<div style="font-size:14px; font-weight:700; color:#16325C; margin-top:12px; margin-bottom:6px;">Historical Benchmark Opportunities</div>', unsafe_allow_html=True)
-                        st.dataframe(bench_df.head(10), use_container_width=True, hide_index=True)
-                    else:
-                        st.warning("⚠️ No comparable benchmark available.")
-
-        # TAB 4: PRINTABLE CLIENT PROPOSAL PREVIEW
+        # TAB 4: DOCUMENT PREVIEW
         with tab_pdf:
-            with st.container(border=True):
-                st.markdown('<div class="sf-card-header">Generated Maven Proposal</div>', unsafe_allow_html=True)
-                st.markdown(f"""
-                ### **MAVEN PROPOSAL / QUOTE**
-                **Quote Number:** Q-00124  
-                **Account Executive:** Calvin King  
-                **Date:** {datetime.date.today().strftime('%B %d, %Y')}  
-                **Prepared For:** Acme Corporation  
-                """, unsafe_allow_html=True)
-                
-                if not df_items.empty:
-                    proposal_df = df_items[["Product", "Quantity", "Offer Price", "Total Price"]].copy()
-                    st.table(proposal_df.style.format({
-                        "Offer Price": "${:.2f}",
-                        "Total Price": "${:.2f}"
-                    }))
-                else:
-                    st.write("No line items on quote.")
-                
-                st.markdown(f"**Grand Total:** `${grand_total:,.2f}`")
+            st.info("Generated PDF preview section goes here.")
 
-    # RIGHT-HAND SIDEBAR SUMMARY & LOGS
+    # --- RIGHT PANEL: SUMMARY & ACTIVITY FEED ---
     with right_col:
-        with st.container(border=True):
-            st.markdown('<div class="sf-card-header">Totals Summary</div>', unsafe_allow_html=True)
-            st.metric("Grand Total", f"${grand_total:,.2f}")
-            st.progress(min(1.0, grand_total / 100000.0), text="Quota Target Progress ($100,000)")
-
-        with st.container(border=True):
-            st.markdown('<div class="sf-card-header">Activity Feed</div>', unsafe_allow_html=True)
-            st.text_input("Log activity...", placeholder="Log call or update notes...", key="act_input")
-            if st.button("Log Activity", use_container_width=True):
-                st.success("Activity logged!")
-
-            st.divider()
-            st.markdown('<div style="font-size:14px; font-weight:700; color:#16325C; margin-bottom:8px;">Recent History</div>', unsafe_allow_html=True)
-            st.markdown('<div style="font-size:12px; font-weight:600; color:#54698D; margin-bottom:6px;">📌 <strong style="color:#16325C;">Stage updated</strong> to <em>In Review</em> — Today</div>', unsafe_allow_html=True)
-            st.markdown('<div style="font-size:12px; font-weight:600; color:#54698D; margin-bottom:6px;">📧 <strong style="color:#16325C;">Email sent:</strong> <em>Quote Q-00124 attached</em> — Yesterday</div>', unsafe_allow_html=True)
-            st.markdown('<div style="font-size:12px; font-weight:600; color:#54698D;">✏️ <strong style="color:#16325C;">Quote Created</strong> by Calvin King — 2 days ago</div>', unsafe_allow_html=True)
+        st.markdown(f"""
+        <div class="glass-card">
+            <div class="metric-label">Grand Total</div>
+            <div class="metric-value" style="margin-top: 4px;">${grand_total:,.2f}</div>
+            <div style="margin-top: 20px;">
+                <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: #64748B; margin-bottom: 6px; font-weight: 500;">
+                    <span>Quota Target Progress ($100,000)</span>
+                    <span>{(grand_total / 100000.0) * 100:.1f}%</span>
+                </div>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        st.progress(min(grand_total / 100000.0, 1.0))
+        st.markdown("<br>", unsafe_allow_html=True)
+        
+        st.markdown("""
+        <div class="glass-card" style="margin-bottom: 12px;">
+            <h4 style="color: #0F172A; font-size: 0.95rem; font-weight: 600; margin-bottom: 4px;">Activity Feed</h4>
+            <p style="font-size: 0.8rem; color: #64748B; margin: 0;">Log calls, notes, or deal updates below.</p>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        note_input = st.text_input(
+            "Log Activity", 
+            placeholder="Log call or update notes...", 
+            label_visibility="collapsed"
+        )
+        if st.button("Log Activity", use_container_width=True):
+            if note_input:
+                st.toast(f"Activity logged: {note_input}", icon="📝")
+            else:
+                st.toast("Please enter a note before logging.", icon="⚠️")
